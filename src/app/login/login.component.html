@@ -1,0 +1,46 @@
+<div class="container bg-dark" style="width: 800px">
+<div class="container" > 
+  <form [formGroup]="loginForm" class="form mt-4" (submit)="login()">
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email</label>
+      <input 
+        formControlName="email" 
+        type="email" 
+        class="form-control" 
+        placeholder="Digite seu email" 
+        autofocus>
+      <small
+        *ngIf="loginForm.get('email').errors?.required"
+        class="text-danger d-block mt-2">
+        Email is required
+      </small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Senha</label>
+      <input 
+        formControlName="senha" 
+        type="password" 
+        class="form-control" 
+        placeholder="Digite sua senha">
+      <small
+        *ngIf="loginForm.get('senha').errors?.required"
+        class="text-danger d-block mt-2">
+        Password is required
+      </small>
+    </div>
+  
+  <button 
+    [disabled]="loginForm.invalid"
+    type="submit" class="btn btn-primary">
+    Entrar
+  </button>
+  <a href=" "  routerLink="../cadastro"> 
+    <button  class="btn " style="background-color: rgb(16, 172, 16);color: white;margin-left: 5px ">
+      Cadastro
+    </button>
+  </a>
+  </form>
+</div>
+</div>
+<br>  <br>

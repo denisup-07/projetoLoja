@@ -1,0 +1,45 @@
+
+
+      <div class="container ">
+       <!-- <mat-form-field appearance="outline">
+          <form [formGroup]="produtoForm" (submit)="Nome()">
+            <mat-label> Buscar</mat-label>
+            <input matInput formControlName="nome">
+          </form>
+          <mat-icon matSuffix >search</mat-icon>
+        
+        </mat-form-field>-->
+
+        <form class="form-inline my-2 my-lg-0" [formGroup]="produtoForm" (submit)="Nome()" >
+          <input class="form-control mr-lg-4" type="search" placeholder="Buscar" aria-label="Search" style="width: 500px;margin-left:200px;"  formControlName="nome">
+          <button class="btn bg-dark" style="color: white" type="submit">Buscar</button>
+        </form>
+
+          <div class="row">
+
+          <div class="col-sm" *ngFor="let dados of produtos">
+             
+          <div class="card " style="width: 18rem;" >
+              <img src="../../assets/images/celular.jpg"  class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{dados.nomeProduto}} <b style="color:rgb(17, 185, 17)">- R$ {{dados.preco}}</b></h5>
+                <p class="card-text">  {{dados.descricao}}</p>
+                <a href="#" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+     
+        
+          </div>
+
+
+
+       
+                    </div>
+    
+       
+              
+        
+
+

@@ -1,0 +1,22 @@
+<div class="container">
+
+    <h4 class="bg-dark">Cadastrar como usuário</h4>
+<br><br>
+  <form (ngSubmit)="salvar()">
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Nome" name="nome" [(ngModel)]="usuario.nomeUsuario">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Email" name="email" FormControlName="email" [(ngModel)]="usuario.emailUsuario">
+      </div>
+    </div><br>
+    <div class="col">
+      <input type="password" class="form-control" placeholder="Senha" name="senha"  FormControlName="senha" [(ngModel)]="usuario.senhaUsuario" style="margin-left: -14px;">
+    </div><br>
+    
+    <button class="btn btn-sucess" >Cadastrar</button>
+  </form>
+      </div>
+
+      <br>  <br>  <br>

@@ -1,0 +1,36 @@
+.example-card {
+  margin-top: -1190px;
+    max-width: 400px;
+    margin-left: 150px;
+
+  }
+
+ .container{
+   padding: 35px;
+   border-radius: 25px;
+   margin-left: 600px;
+   margin-top:  -300px;
+   background-color: rgb(219, 222, 223);
+ }
+  mat-form-field{
+    font-size: 15px;
+    margin-left: 150px;
+  
+    width: 600px;
+}
+.card{
+  margin-top: 20px;
+}
+
+@media (max-width:400px){
+
+      .container{
+        margin-top: 20px;
+        margin-left: 0px;
+      }
+
+      mat-form-field{
+         margin-left: 0px;
+         width: 100%;
+      }
+}
