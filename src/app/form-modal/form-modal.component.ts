@@ -32,7 +32,7 @@ import { Router } from '@angular/router';
     <input type="password" class="form-control" id="inputPassword2" placeholder="Senha"  formControlName="senha" >
   </div> 
 
-<button type="submit" class="btn btn-primary " style="background-color:green;margin-right:5px;" [disabled]="loginForm.invalid" >Entrar</button>
+<button type="submit" class="btn btn-primary " style="background-color:green;margin-right:5px;" [disabled]="loginForm.invalid"  >Entrar</button>
 <button type="submit" class="btn bg-dark" style='color:white;margin-right:50px;' routerLink="../cadastro" (click)="activeModal.close('Close click')">Cadastrar</button>
 </form>
 
@@ -67,12 +67,22 @@ export class FormModalComponent implements OnInit {
     const senha = this.loginForm.get('senha').value;
     this.authService.authenticate(email, senha)
     .subscribe(
-      () => this.router.navigateByUrl('telaAdm'),
+      () => {this.router.navigateByUrl('telaAdm'),
+      this.closeModal()
+      },
+   
       err => {
         this.loginForm.reset();
         alert('Email ou senha inválido');
+
+      
       }
+   
     );
   }
 
+
+    closeModal(){
+      this.activeModal.close('Close click');
+    }
 }

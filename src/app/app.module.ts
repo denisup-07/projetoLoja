@@ -23,6 +23,7 @@ import { ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 import { TelaAdmComponent } from './tela-adm/tela-adm.component';
 import { FormProdutoComponent } from './form-produto/form-produto.component';
+import { ImagemProdutoComponent } from './imagem-produto/imagem-produto.component';
 
 
 
@@ -39,7 +40,7 @@ import { FormProdutoComponent } from './form-produto/form-produto.component';
     TelaAdmComponent,
     FormModalComponent,
     FormProdutoComponent,
-    
+    ImagemProdutoComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,7 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 import { UploadComponent } from './upload/upload.component';
 import { TelaAdmComponent } from './tela-adm/tela-adm.component';
 import { FormProdutoComponent } from './form-produto/form-produto.component';
+import { ImagemProdutoComponent } from './imagem-produto/imagem-produto.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'upload', component: UploadComponent },
   { path: 'telaAdm', component: TelaAdmComponent },
   { path: 'novoProduto', component: FormProdutoComponent },
+  { path: 'imagemProduto', component: ImagemProdutoComponent },
 ];
 
 @NgModule({

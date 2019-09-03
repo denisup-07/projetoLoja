@@ -2,7 +2,8 @@ import { Component, OnInit, Input, EventEmitter} from '@angular/core';
 import {moveIn, fallIn} from '../router.animation';
 import { ProdutosService } from '../produtos.service';
 import {FormGroup, FormBuilder, Validators} from '@angular/forms';
-
+import {HttpClient } from '@angular/common/http';
+import { Produto } from '../produto';
 @Component({
   selector: 'app-produtos',
   templateUrl: './produtos.component.html',
@@ -12,9 +13,8 @@ import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 })
 export class ProdutosComponent implements OnInit {
   produtoForm: FormGroup;
-  produtos: Array<any> 
-
-  constructor(private produtoService: ProdutosService, private formBuilder: FormBuilder) { }
+  produtos: Array<any>
+  constructor(private http: HttpClient, private produtoService: ProdutosService, private formBuilder: FormBuilder) { }
   
   ngOnInit(): void{
       this.produtoForm = this.formBuilder.group({
@@ -28,7 +28,6 @@ export class ProdutosComponent implements OnInit {
         console.log(dados)
         this.produtos = dados
       });
-  
       console.log(this.produtos);
     }
 
